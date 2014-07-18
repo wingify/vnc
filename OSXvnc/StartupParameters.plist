@@ -1,0 +1,12 @@
+{
+  Description     = "VNC Server";
+  Provides        = ("VNC");
+  Requires        = ("Resolver");
+  Uses			  = ("Core Graphics");
+  OrderPreference = "None";
+  Messages =  {
+	restart = "Restarting OSXvnc server";
+	start = "Starting OSXvnc server";
+	stop = "Stopping OSXvnc server";
+  };
+}

@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A598" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1060" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="1668" id="1783"/>
+                <outlet property="dockMenu" destination="1669" id="1784"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3"/>
+        <customObject id="1507" customClass="NSApplication"/>
+        <window title="Vine Server Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" frameAutosaveName="Preferences" animationBehavior="default" id="1508">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="601" y="672" width="478" height="361"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="127" height="5"/>
+            <view key="contentView" id="1509">
+                <rect key="frame" x="0.0" y="0.0" width="478" height="361"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tabView id="1510">
+                        <rect key="frame" x="13" y="43" width="452" height="312"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="Connection" identifier="" id="1511">
+                                <view key="view" id="1512">
+                                    <rect key="frame" x="10" y="33" width="432" height="266"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField verticalHuggingPriority="750" id="1513">
+                                            <rect key="frame" x="17" y="195" width="125" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <string key="toolTip">Display Number for VNC Server
+Note: This number+5900 is the port that will be used</string>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Display Number:" id="1514">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1998">
+                                            <rect key="frame" x="273" y="197" width="50" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <string key="toolTip">Display Number for VNC Server
+Note: This number+5900 is the port that will be used</string>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Port:" id="1999">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <popUpButton verticalHuggingPriority="750" id="1515">
+                                            <rect key="frame" x="144" y="191" width="94" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <string key="toolTip">Display Number for VNC Server
+Note: This number+5900 is the port that will be used</string>
+                                            <popUpButtonCell key="cell" type="push" title="Auto" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="1518" id="1516">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" title="OtherViews" id="1517">
+                                                    <items>
+                                                        <menuItem title="Auto" state="on" id="1518"/>
+                                                        <menuItem title="0" tag="5900" id="1519"/>
+                                                        <menuItem title="1" tag="5901" id="1528"/>
+                                                        <menuItem title="2" tag="5902" id="1527"/>
+                                                        <menuItem title="3" tag="5903" id="1529"/>
+                                                        <menuItem title="4" tag="5904" id="1526"/>
+                                                        <menuItem title="5" tag="5905" id="1525"/>
+                                                        <menuItem title="6" tag="5906" id="1524"/>
+                                                        <menuItem title="7" tag="5907" id="1523"/>
+                                                        <menuItem title="8" tag="5908" id="1522"/>
+                                                        <menuItem title="9" tag="5909" id="1521"/>
+                                                        <menuItem title="--" tag="99" id="1520"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <action selector="changeDisplayNumber:" target="1668" id="1860"/>
+                                            </connections>
+                                        </popUpButton>
+                                        <textField verticalHuggingPriority="750" id="1530">
+                                            <rect key="frame" x="328" y="194" width="64" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                            <string key="toolTip">Port Number that VNC will use to  communicate.
+Note: Same as Display Number+5900
+Note: Same as Display Number+5900</string>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="1531">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="changePort:" target="1668" id="1861"/>
+                                            </connections>
+                                        </textField>
+                                        <textField toolTip="Name that the VNC viewer will see for this server." verticalHuggingPriority="750" id="1534">
+                                            <rect key="frame" x="38" y="223" width="104" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Display Name:" id="1535">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField toolTip="Name that the VNC viewer will see for this server." verticalHuggingPriority="750" id="1536">
+                                            <rect key="frame" x="147" y="224" width="245" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="Mac OS X" drawsBackground="YES" id="1537">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="changeDisplayName:" target="1668" id="1862"/>
+                                            </connections>
+                                        </textField>
+                                        <box title="Authentication" id="1538">
+                                            <rect key="frame" x="29" y="54" width="366" height="121"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="2" y="2" width="362" height="104"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField verticalHuggingPriority="750" id="1539">
+                                                        <rect key="frame" x="161" y="72" width="88" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                        <string key="toolTip">Password required to connect with VNC Clients
+Note: Password length is not preserved</string>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="1540">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <action selector="changePassword:" target="1668" id="1863"/>
+                                                            <outlet property="delegate" destination="1668" id="1787"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="1541">
+                                                        <rect key="frame" x="27" y="53" width="134" height="38"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="134" height="18"/>
+                                                        <size key="intercellSpacing" width="4" height="2"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="1542">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="VNC Password" imagePosition="left" alignment="left" state="on" toolTip="Password required to connect with VNC Client" tag="1" inset="2" id="1543">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="None" imagePosition="left" alignment="left" tag="2" inset="2" id="1544">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                        <connections>
+                                                            <action selector="changeAuthenticationType:" target="1668" id="1906"/>
+                                                        </connections>
+                                                    </matrix>
+                                                    <button id="1545">
+                                                        <rect key="frame" x="27" y="9" width="379" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Require Remote Login (SSH)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1546">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1877"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="initialFirstResponder" destination="1536" id="1846"/>
+                                </connections>
+                            </tabViewItem>
+                            <tabViewItem label="Device" identifier="" id="1573">
+                                <view key="view" id="1574">
+                                    <rect key="frame" x="10" y="33" width="432" height="266"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box title="Mouse" id="1575">
+                                            <rect key="frame" x="19" y="109" width="392" height="54"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <string key="toolTip">Checking this box swaps the middle and right mouse buttons.  By convention the buttons sent by VNC client is in the opposite order as Mac OS X buttons.</string>
+                                            <view key="contentView">
+                                                <rect key="frame" x="2" y="2" width="388" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button id="1576">
+                                                        <rect key="frame" x="12" y="8" width="208" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Swap Mouse Buttons 2 and 3" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="1577">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1882"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <box title="Display" id="1578">
+                                            <rect key="frame" x="19" y="162" width="392" height="98"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="2" y="2" width="388" height="81"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button id="1579">
+                                                        <rect key="frame" x="12" y="51" width="175" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <string key="toolTip">Enable this if you want to allow the machine to sleep.
+Sleeping machines can not be reached by VNC.</string>
+                                                        <buttonCell key="cell" type="check" title="Allow machine to sleep" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1580">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1880"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button id="1581">
+                                                        <rect key="frame" x="12" y="31" width="181" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <string key="toolTip">Enable this to prevent the screen from dimming while clients are connected.
+Any Input will un-dim the screen.</string>
+                                                        <buttonCell key="cell" type="check" title="Allow display dimming" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="1582">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1881"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button toolTip="Enable this to allow the screen saver to turn on when clients are connected." id="1583">
+                                                        <rect key="frame" x="12" y="11" width="200" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Allow screen saver to start" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="1584">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1889"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <box toolTip="The keyboard layout that Vine Server uses to interpret keystrokes from a VNC viewer." title="Keyboard (Mac OS X 10.4 and later)" id="1585">
+                                            <rect key="frame" x="19" y="44" width="392" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="2" y="2" width="388" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <popUpButton toolTip="The keyboard layout that Vine Server uses to interpret keystrokes from a VNC viewer." verticalHuggingPriority="750" id="1586">
+                                                        <rect key="frame" x="156" y="9" width="219" height="26"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <popUpButtonCell key="cell" type="push" title="U.S." bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="1591" id="1587">
+                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="menu"/>
+                                                            <menu key="menu" title="OtherViews" id="1588">
+                                                                <items>
+                                                                    <menuItem title="U.S." state="on" id="1591"/>
+                                                                    <menuItem title="Unicode Hex Input" tag="2" id="1589"/>
+                                                                    <menuItem title="Current Keyboard" tag="1" id="1590"/>
+                                                                </items>
+                                                            </menu>
+                                                        </popUpButtonCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1892"/>
+                                                        </connections>
+                                                    </popUpButton>
+                                                    <textField verticalHuggingPriority="750" id="1592">
+                                                        <rect key="frame" x="13" y="15" width="114" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Keyboard Layout:" id="1593">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Sharing" identifier="" id="1547">
+                                <view key="view" id="1548">
+                                    <rect key="frame" x="10" y="33" width="432" height="266"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box toolTip="This section controls how multiple VNC clients share the screen" title="Server Sharing" id="1549">
+                                            <rect key="frame" x="19" y="37" width="392" height="123"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="2" y="2" width="388" height="103"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="1550">
+                                                        <rect key="frame" x="14" y="34" width="350" height="59"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="350" height="18"/>
+                                                        <size key="intercellSpacing" width="4" height="2"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="1551">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Always allow multiple VNC connections" bezelStyle="regularSquare" imagePosition="left" alignment="left" toolTip="Always allow multiple VNC clients" tag="1" inset="2" id="1552">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Let viewers request exclusive access" imagePosition="left" alignment="left" state="on" toolTip="Allow client to specify if it will work while other VNC clients are connected." inset="2" id="1553">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Allow only one VNC connection at a time" bezelStyle="regularSquare" imagePosition="left" alignment="left" toolTip="Never allow multiple VNC clients" tag="2" inset="2" id="1554">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                        <connections>
+                                                            <action selector="changeSharing:" target="1668" id="1874"/>
+                                                        </connections>
+                                                    </matrix>
+                                                    <button toolTip="Checking this box means the new client is denied access.  Unchecking it means the existing client is disconnected." id="1555">
+                                                        <rect key="frame" x="29" y="12" width="353" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Keep existing viewer if a new viewer tries to connect" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="1556">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1875"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <button id="1557">
+                                            <rect key="frame" x="23" y="230" width="378" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Disable remote control of keyboard and mouse" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1558">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="optionChanged:" target="1668" id="1876"/>
+                                            </connections>
+                                        </button>
+                                        <button id="1559">
+                                            <rect key="frame" x="23" y="190" width="278" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Advertise server via Bonjour" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1560">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="optionChanged:" target="1668" id="1885"/>
+                                            </connections>
+                                        </button>
+                                        <button id="1561">
+                                            <rect key="frame" x="23" y="210" width="333" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Disable rich clipboard support (Vine Viewer Only)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1562">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Startup" identifier="" id="1563">
+                                <view key="view" id="1564">
+                                    <rect key="frame" x="10" y="33" width="432" height="266"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button id="1565">
+                                            <rect key="frame" x="18" y="230" width="383" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Start server when Vine Server application is launched" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1566">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="saveUserDefaults:" target="1668" id="1878"/>
+                                            </connections>
+                                        </button>
+                                        <button id="1567">
+                                            <rect key="frame" x="18" y="190" width="383" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Restart server if it stops unexpectedly" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="1568">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button id="1569">
+                                            <rect key="frame" x="18" y="210" width="389" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Stop server on a fast user switch" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1570">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="optionChanged:" target="1668" id="1883"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="1571">
+                                            <rect key="frame" x="14" y="104" width="196" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <buttonCell key="cell" type="push" title="System Server..." bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1572">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="makeKeyAndOrderFront:" target="1726" id="1910"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Advanced" identifier="" id="1594">
+                                <view key="view" id="1595">
+                                    <rect key="frame" x="10" y="33" width="432" height="266"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box toolTip="The event taps that Vine Server uses to interpret keystrokes from a VNC viewer." title="Keyboard" id="1596">
+                                            <rect key="frame" x="19" y="19" width="403" height="86"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="2" y="2" width="399" height="69"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <popUpButton toolTip="The OS level at which Vine Server interprets keyboard input from a VNC viewer." verticalHuggingPriority="750" id="1597">
+                                                        <rect key="frame" x="166" y="35" width="219" height="26"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <popUpButtonCell key="cell" type="push" title="Smart Event Management" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="3" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="1600" id="1598">
+                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="menu"/>
+                                                            <menu key="menu" title="OtherViews" id="1599">
+                                                                <items>
+                                                                    <menuItem title="Smart Event Management" state="on" tag="3" id="1600"/>
+                                                                    <menuItem title="Hardware Events " id="1602"/>
+                                                                    <menuItem title="User Session Events" tag="1" id="1601"/>
+                                                                </items>
+                                                            </menu>
+                                                        </popUpButtonCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1916"/>
+                                                        </connections>
+                                                    </popUpButton>
+                                                    <textField verticalHuggingPriority="750" id="1603">
+                                                        <rect key="frame" x="16" y="41" width="121" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Keyboard Events:" id="1604">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <popUpButton toolTip="The OS level at which Vine Server interprets keyboard input from a VNC viewer." verticalHuggingPriority="750" id="1605">
+                                                        <rect key="frame" x="166" y="9" width="219" height="26"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <popUpButtonCell key="cell" type="push" title="HID Event Source" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="1610" id="1606">
+                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="menu"/>
+                                                            <menu key="menu" title="OtherViews" id="1607">
+                                                                <items>
+                                                                    <menuItem title="Private Event Source" tag="2" id="1608"/>
+                                                                    <menuItem title="Combined Event Source" tag="1" id="1609"/>
+                                                                    <menuItem title="HID Event Source" state="on" id="1610"/>
+                                                                    <menuItem title="10.3 API (No Source)" tag="3" id="1611"/>
+                                                                </items>
+                                                            </menu>
+                                                        </popUpButtonCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1915"/>
+                                                        </connections>
+                                                    </popUpButton>
+                                                    <textField verticalHuggingPriority="750" id="1612">
+                                                        <rect key="frame" x="16" y="15" width="121" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Event Source:" id="1613">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <box title="RFB Protocol" borderType="line" id="1614">
+                                            <rect key="frame" x="19" y="200" width="162" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="1" y="1" width="160" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <popUpButton toolTip="Select to force the server to use an older protocol." verticalHuggingPriority="750" id="1615">
+                                                        <rect key="frame" x="15" y="10" width="130" height="26"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                        <popUpButtonCell key="cell" type="push" title="Default (3.8)" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="1619" id="1616">
+                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="menu"/>
+                                                            <menu key="menu" title="OtherViews" id="1617">
+                                                                <items>
+                                                                    <menuItem title="Default (3.8)" state="on" id="1619"/>
+                                                                    <menuItem title="3.7" id="1618"/>
+                                                                    <menuItem title="3.3" id="1620"/>
+                                                                </items>
+                                                            </menu>
+                                                        </popUpButtonCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1891"/>
+                                                        </connections>
+                                                    </popUpButton>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <box title="Command Line Arguments" borderType="line" id="1621">
+                                            <rect key="frame" x="19" y="116" width="404" height="80"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="1" y="1" width="402" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField verticalHuggingPriority="750" id="1622">
+                                                        <rect key="frame" x="22" y="23" width="358" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1623">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <action selector="optionChanged:" target="1668" id="1890"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                    <textField verticalHuggingPriority="750" id="1624">
+                        <rect key="frame" x="40" y="28" width="400" height="17"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Preference Message" id="1625">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="1668" id="1785"/>
+                <outlet property="initialFirstResponder" destination="1515" id="1786"/>
+            </connections>
+        </window>
+        <menu title="MainMenu" systemMenu="main" id="1626">
+            <items>
+                <menuItem title="Vine Server" id="1627">
+                    <menu key="submenu" title="Vine Server" systemMenu="apple" id="1628">
+                        <items>
+                            <menuItem title="About Vine Server" id="1629">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="1850"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Preferences..." keyEquivalent="," id="1640">
+                                <connections>
+                                    <action selector="makeKeyAndOrderFront:" target="1508" id="1894"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="1634">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="1630">
+                                <menu key="submenu" title="Services" systemMenu="services" id="1631"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="1635">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide Vine Server" keyEquivalent="h" id="1632">
+                                <connections>
+                                    <action selector="hide:" target="-2" id="1852"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" id="1636">
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-2" id="1854"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="1638">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-2" id="1855"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="1637">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit Vine Server..." keyEquivalent="q" id="1633">
+                                <connections>
+                                    <action selector="terminateRequest:" target="1668" id="1853"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Quit Vine Server" alternate="YES" keyEquivalent="q" id="1639">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="terminate:" target="-2" id="1893"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Server" id="1641">
+                    <menu key="submenu" title="Server" id="1642">
+                        <items>
+                            <menuItem title="Start Server" id="1649">
+                                <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                <connections>
+                                    <action selector="startServer:" target="1668" id="1900"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Stop Server" keyEquivalent="." id="1643">
+                                <connections>
+                                    <action selector="stopServer:" target="1668" id="1864"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="1645">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="View Log" keyEquivalent="V" id="1644">
+                                <connections>
+                                    <action selector="openLog:" target="1668" id="1868"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Reverse Connection..." keyEquivalent="r" id="1647">
+                                <connections>
+                                    <action selector="reverseConnection:" target="1668" id="1897"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="1648">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Server..." keyEquivalent="s" id="1650">
+                                <connections>
+                                    <action selector="makeKeyAndOrderFront:" target="1677" id="1914"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="System Server..." keyEquivalent="S" id="1646">
+                                <connections>
+                                    <action selector="makeKeyAndOrderFront:" target="1726" id="1873"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="1658">
+                    <menu key="submenu" title="Edit" id="1659">
+                        <items>
+                            <menuItem title="Cut" keyEquivalent="x" id="1661">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="1857"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="1660">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="1856"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="1662">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="1858"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="1663">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="1859"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="1664">
+                    <menu key="submenu" title="Window" systemMenu="window" id="1665">
+                        <items>
+                            <menuItem title="Close Window" keyEquivalent="w" id="1667">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="1869"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Minimize" keyEquivalent="m" id="1666">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="1865"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help " id="1651">
+                    <menu key="submenu" title="Help " id="1652">
+                        <items>
+                            <menuItem title="Vine Server Help" keyEquivalent="?" id="1653">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="1851"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Configure Firewall" id="1657">
+                                <connections>
+                                    <action selector="openFirewall:" target="1668" id="1902"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="1655">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Release Notes" id="1654">
+                                <connections>
+                                    <action selector="openReleaseNotes:" target="1668" id="1866"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="GPL License" id="1656">
+                                <connections>
+                                    <action selector="openGPL:" target="1668" id="1867"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <customObject id="1668" customClass="VNCController">
+            <connections>
+                <outlet property="allowDimmingCheckbox" destination="1581" id="1788"/>
+                <outlet property="allowRendezvousCheckbox" destination="1559" id="1789"/>
+                <outlet property="allowScreenSaverCheckbox" destination="1583" id="1790"/>
+                <outlet property="allowSleepCheckbox" destination="1579" id="1791"/>
+                <outlet property="authenticationType" destination="1541" id="1792"/>
+                <outlet property="connectHost" destination="1714" id="1793"/>
+                <outlet property="connectPort" destination="1718" id="1794"/>
+                <outlet property="disableRemoteEventsCheckbox" destination="1557" id="1795"/>
+                <outlet property="disableRichClipboardCheckbox" destination="1561" id="1796"/>
+                <outlet property="disableStartupButton" destination="1734" id="1797"/>
+                <outlet property="displayNameField" destination="1536" id="1798"/>
+                <outlet property="displayNumText" destination="1703" id="1799"/>
+                <outlet property="displayNumberField" destination="1515" id="1800"/>
+                <outlet property="dontDisconnectCheckbox" destination="1555" id="1801"/>
+                <outlet property="eventSourcePopup" destination="1605" id="1802"/>
+                <outlet property="hostNamesBox" destination="1683" id="1803"/>
+                <outlet property="hostNamesField" destination="1684" id="1804"/>
+                <outlet property="initialAuthenticationType" destination="1775" id="1805"/>
+                <outlet property="initialDoneButton" destination="1781" id="1806"/>
+                <outlet property="initialPasswordText" destination="1773" id="1807"/>
+                <outlet property="initialWindow" destination="1771" id="1808"/>
+                <outlet property="ipAddressesBox" destination="1686" id="1809"/>
+                <outlet property="ipAddressesView" destination="1690" id="1810"/>
+                <outlet property="keyboardEvents" destination="1597" id="1811"/>
+                <outlet property="keyboardLayout" destination="1586" id="1812"/>
+                <outlet property="limitToLocalConnections" destination="1545" id="1813"/>
+                <outlet property="optionsTabView" destination="1510" id="1814"/>
+                <outlet property="otherArguments" destination="1622" id="1815"/>
+                <outlet property="passwordField" destination="1539" id="1816"/>
+                <outlet property="portField" destination="1530" id="1817"/>
+                <outlet property="portNumText" destination="1699" id="1818"/>
+                <outlet property="preferenceWindow" destination="1508" id="1819"/>
+                <outlet property="preferencesMessageTestField" destination="1624" id="1820"/>
+                <outlet property="protocolVersion" destination="1615" id="1821"/>
+                <outlet property="reverseConnectionMessageField" destination="1724" id="1822"/>
+                <outlet property="reverseConnectionWindow" destination="1709" id="1823"/>
+                <outlet property="serverKeepAliveCheckbox" destination="1567" id="1824"/>
+                <outlet property="serverMenuItem" destination="1650" id="1825"/>
+                <outlet property="setStartupButton" destination="1728" id="1826"/>
+                <outlet property="sharingMatrix" destination="1550" id="1827"/>
+                <outlet property="startServerButton" destination="1679" id="1828"/>
+                <outlet property="startServerMenuItem" destination="1649" id="1829"/>
+                <outlet property="startServerOnLaunchCheckbox" destination="1565" id="1830"/>
+                <outlet property="startupItemStatusMessageField" destination="1732" id="1831"/>
+                <outlet property="statusMessageField" destination="1706" id="1832"/>
+                <outlet property="statusWindow" destination="1677" id="1833"/>
+                <outlet property="stopServerButton" destination="1681" id="1834"/>
+                <outlet property="stopServerMenuItem" destination="1643" id="1835"/>
+                <outlet property="swapMouseButtonsCheckbox" destination="1576" id="1836"/>
+                <outlet property="systemServerAuthenticationType" destination="1765" id="1837"/>
+                <outlet property="systemServerDisplayNameField" destination="1760" id="1838"/>
+                <outlet property="systemServerDisplayNumberField" destination="1739" id="1839"/>
+                <outlet property="systemServerLimitToLocalConnections" destination="1769" id="1840"/>
+                <outlet property="systemServerMenu" destination="1646" id="1841"/>
+                <outlet property="systemServerPasswordField" destination="1763" id="1842"/>
+                <outlet property="systemServerPortField" destination="1754" id="1843"/>
+                <outlet property="systemServerWindow" destination="1726" id="1844"/>
+                <outlet property="terminateOnFastUserSwitch" destination="1569" id="1845"/>
+            </connections>
+        </customObject>
+        <menu title="Menu" id="1669">
+            <items>
+                <menuItem title="Preferences..." id="1676">
+                    <connections>
+                        <action selector="makeKeyAndOrderFront:" target="1508" id="1901"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="1671">
+                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                </menuItem>
+                <menuItem title="Start Server" id="1670">
+                    <connections>
+                        <action selector="startServer:" target="1668" id="1870"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Stop Server" id="1672">
+                    <connections>
+                        <action selector="stopServer:" target="1668" id="1871"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="1675">
+                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                </menuItem>
+                <menuItem title="View Log" id="1673">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openLog:" target="1668" id="1872"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Reverse Connection..." id="1674">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="reverseConnection:" target="1668" id="1899"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Vine Server" deferred="NO" releasedWhenClosed="NO" wantsToBeColor="NO" frameAutosaveName="Server" animationBehavior="default" id="1677">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="191" y="684" width="408" height="337"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="350" height="330"/>
+            <view key="contentView" id="1678">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="337"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" id="1681">
+                        <rect key="frame" x="11" y="12" width="128" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Stop Server" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" inset="2" id="1682">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="stopServer:" target="1668" id="1896"/>
+                        </connections>
+                    </button>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="1705">
+                        <rect key="frame" x="17" y="54" width="371" height="62"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <clipView key="contentView" id="Hhm-JN-Oby">
+                            <rect key="frame" x="1" y="1" width="369" height="60"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="1706">
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="369" height="60"/>
+                                    <size key="maxSize" width="371" height="10000000"/>
+                                    <attributedString key="textStorage">
+                                        <fragment content="The server is not running">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" metaFont="user"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="369" height="60"/>
+                                    <size key="maxSize" width="371" height="10000000"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="1707">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="1708">
+                            <rect key="frame" x="355" y="1" width="15" height="60"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <box title="IP Address" id="1686">
+                        <rect key="frame" x="14" y="172" width="377" height="74"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="2" y="2" width="373" height="57"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="1687">
+                                    <rect key="frame" x="11" y="2" width="358" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <clipView key="contentView" autoresizesSubviews="NO" drawsBackground="NO" copiesOnScroll="NO" id="Pwz-Bg-Wcc">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <matrix verticalHuggingPriority="750" mode="track" selectionByRect="NO" allowsEmptySelection="NO" autosizesCells="NO" id="1690">
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="cellSize" width="169" height="17"/>
+                                                <size key="intercellSpacing" width="10" height="0.0"/>
+                                                <textFieldCell key="prototype" selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" tag="-1" id="1691">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <cells>
+                                                    <column>
+                                                        <textFieldCell selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" title="IP1" id="1695">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <textFieldCell selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" tag="2" title="IP2" id="1693">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </column>
+                                                    <column>
+                                                        <textFieldCell selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" tag="1" title="Status1" id="1694">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <textFieldCell selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" tag="2" title="Status2" id="1692">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </column>
+                                                </cells>
+                                            </matrix>
+                                        </subviews>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" controlSize="small" horizontal="YES" id="1689">
+                                        <rect key="frame" x="-100" y="-100" width="314" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.64705884456634521" controlSize="small" horizontal="NO" id="1688">
+                                        <rect key="frame" x="-22" y="0.0" width="11" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <box title="Host Name" id="1683">
+                        <rect key="frame" x="14" y="247" width="377" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="2" y="2" width="373" height="63"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField toolTip="Host Name that can be used to refer to this machine" verticalHuggingPriority="750" id="1684">
+                                    <rect key="frame" x="11" y="11" width="349" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" id="1685">
+                                        <font key="font" metaFont="cellTitle"/>
+                                        <string key="title">Host Name1
+Host Name2
+Host Name3</string>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <box title="Port" id="1696">
+                        <rect key="frame" x="14" y="120" width="377" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="2" y="2" width="373" height="33"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField verticalHuggingPriority="750" id="1697">
+                                    <rect key="frame" x="284" y="8" width="37" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Port:" id="1698">
+                                        <font key="font" metaFont="cellTitle"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="1699">
+                                    <rect key="frame" x="316" y="8" width="44" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="5900" id="1700">
+                                        <font key="font" metaFont="cellTitle"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="1701">
+                                    <rect key="frame" x="10" y="8" width="110" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Display Number:" id="1702">
+                                        <font key="font" metaFont="cellTitle"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="1703">
+                                    <rect key="frame" x="125" y="8" width="37" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="0" id="1704">
+                                        <font key="font" metaFont="cellTitle"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <button verticalHuggingPriority="750" id="1679">
+                        <rect key="frame" x="266" y="12" width="128" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Start Server" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1680">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="startServer:" target="1668" id="1895"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="Uqk-Kt-egY">
+                        <rect key="frame" x="137" y="12" width="130" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Select Window" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dK8-R7-VdZ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="actionSelectWindow:" target="1668" id="gDI-yN-6q8"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="1668" id="1847"/>
+            </connections>
+        </window>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="1709">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="336" y="421" width="423" height="143"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="213" height="107"/>
+            <view key="contentView" id="1710">
+                <rect key="frame" x="0.0" y="0.0" width="423" height="143"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <box title="Reverse Connection" id="1713">
+                        <rect key="frame" x="14" y="49" width="398" height="85"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="2" y="2" width="394" height="68"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField toolTip="IP/Machine Name of listening VNC viewer" verticalHuggingPriority="750" id="1714">
+                                    <rect key="frame" x="189" y="35" width="189" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="1715">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <action selector="performClick:" target="1711" id="1886"/>
+                                    </connections>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="1716">
+                                    <rect key="frame" x="14" y="36" width="170" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Viewer Host Name or IP:" id="1717">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField toolTip="Port Number to connect listening VNC viewer" verticalHuggingPriority="750" id="1718">
+                                    <rect key="frame" x="189" y="8" width="74" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="1719">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <action selector="performClick:" target="1711" id="1887"/>
+                                    </connections>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="2002">
+                                    <rect key="frame" x="134" y="9" width="50" height="19"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <string key="toolTip">Display Number for VNC Server
+Note: This number+5900 is the port that will be used</string>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Port:" id="2003">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="smallSystemBold"/>
+                    </box>
+                    <button toolTip="Add a listening VNC viewer." verticalHuggingPriority="750" id="1711">
+                        <rect key="frame" x="314" y="12" width="101" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                        <buttonCell key="cell" type="push" title="Connect" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1712">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="connectHost:" target="1668" id="1888"/>
+                        </connections>
+                    </button>
+                    <button toolTip="Add a listening VNC viewer." verticalHuggingPriority="750" id="1722">
+                        <rect key="frame" x="213" y="12" width="101" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1723">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancelConnectHost:" target="1668" id="1898"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" id="1724">
+                        <rect key="frame" x="14" y="16" width="197" height="29"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Reverse Connection Message" id="1725">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+        </window>
+        <window title="System Server" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" frameAutosaveName="System Server" animationBehavior="default" id="1726">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="610" y="634" width="430" height="390"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="213" height="107"/>
+            <view key="contentView" id="1727">
+                <rect key="frame" x="0.0" y="0.0" width="430" height="390"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" id="1730">
+                        <rect key="frame" x="20" y="73" width="376" height="85"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="1731">
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="title">The System Server will start when the machine boots and display the console screen independent of users' desktop servers.  Specify connection preferences for the system server above.  Other preferences are shared with desktop servers.
+
+Clipboard sharing is unavailable prior to Mac OS X 10.5</string>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <box title="Connection Preferences" id="1736">
+                        <rect key="frame" x="17" y="162" width="396" height="221"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="2" y="2" width="392" height="201"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField verticalHuggingPriority="750" id="1737">
+                                    <rect key="frame" x="3" y="140" width="125" height="19"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <string key="toolTip">Display Number for VNC Server
+Note: This number+5900 is the port that will be used</string>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Display Number:" id="1738">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <popUpButton verticalHuggingPriority="750" id="1739">
+                                    <rect key="frame" x="130" y="136" width="94" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <string key="toolTip">Display Number for VNC Server
+Note: This number+5900 is the port that will be used</string>
+                                    <popUpButtonCell key="cell" type="push" title="Auto" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="1745" id="1740">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="menu"/>
+                                        <menu key="menu" title="OtherViews" id="1741">
+                                            <items>
+                                                <menuItem title="Auto" state="on" id="1745"/>
+                                                <menuItem title="0" tag="5900" id="1749"/>
+                                                <menuItem title="1" tag="5901" id="1746"/>
+                                                <menuItem title="2" tag="5902" id="1748"/>
+                                                <menuItem title="3" tag="5903" id="1743"/>
+                                                <menuItem title="4" tag="5904" id="1747"/>
+                                                <menuItem title="5" tag="5905" id="1744"/>
+                                                <menuItem title="6" tag="5906" id="1752"/>
+                                                <menuItem title="7" tag="5907" id="1753"/>
+                                                <menuItem title="8" tag="5908" id="1742"/>
+                                                <menuItem title="9" tag="5909" id="1751"/>
+                                                <menuItem title="--" tag="99" id="1750"/>
+                                            </items>
+                                        </menu>
+                                    </popUpButtonCell>
+                                    <connections>
+                                        <action selector="changeSystemServerPort:" target="1668" id="1903"/>
+                                    </connections>
+                                </popUpButton>
+                                <textField verticalHuggingPriority="750" id="1754">
+                                    <rect key="frame" x="314" y="139" width="64" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                    <string key="toolTip">Port Number that VNC will use to  communicate.
+Note: Same as Display Number+5900
+Note: Same as Display Number+5900</string>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="1755">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <action selector="changeSystemServerPort:" target="1668" id="1904"/>
+                                    </connections>
+                                </textField>
+                                <textField toolTip="Name that the VNC viewer will see for this server." verticalHuggingPriority="750" id="1758">
+                                    <rect key="frame" x="24" y="168" width="104" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Display Name:" id="1759">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField toolTip="Name that the VNC viewer will see for this server." verticalHuggingPriority="750" id="1760">
+                                    <rect key="frame" x="133" y="169" width="245" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="Mac OS X" drawsBackground="YES" id="1761">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <action selector="saveUserDefaults:" target="1668" id="1905"/>
+                                    </connections>
+                                </textField>
+                                <box title="Authentication" id="1762">
+                                    <rect key="frame" x="13" y="7" width="366" height="121"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <view key="contentView">
+                                        <rect key="frame" x="2" y="2" width="362" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textField verticalHuggingPriority="750" id="1763">
+                                                <rect key="frame" x="167" y="72" width="88" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <string key="toolTip">Password required to connect with VNC Client.
+Note: Size is not preserved</string>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="1764">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <action selector="changeSystemServerAuthentication:" target="1668" id="1907"/>
+                                                    <outlet property="delegate" destination="1668" id="1848"/>
+                                                </connections>
+                                            </textField>
+                                            <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="1765">
+                                                <rect key="frame" x="27" y="53" width="116" height="38"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="cellSize" width="116" height="18"/>
+                                                <size key="intercellSpacing" width="4" height="2"/>
+                                                <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="1768">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <cells>
+                                                    <column>
+                                                        <buttonCell type="radio" title="VNC Password" imagePosition="left" alignment="left" state="on" toolTip="Password required to connect with VNC Client" tag="1" inset="2" id="1767">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <buttonCell type="radio" title="None" imagePosition="left" alignment="left" tag="2" inset="2" id="1766">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </column>
+                                                </cells>
+                                                <connections>
+                                                    <action selector="changeSystemServerAuthentication:" target="1668" id="1908"/>
+                                                </connections>
+                                            </matrix>
+                                            <button id="1769">
+                                                <rect key="frame" x="27" y="9" width="379" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="check" title="Require Remote Login (SSH)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1770">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="saveUserDefaults:" target="1668" id="1909"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </box>
+                                <textField verticalHuggingPriority="750" id="2000">
+                                    <rect key="frame" x="259" y="140" width="50" height="19"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <string key="toolTip">Display Number for VNC Server
+Note: This number+5900 is the port that will be used</string>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Port:" id="2001">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="system"/>
+                    </box>
+                    <textField verticalHuggingPriority="750" id="1732">
+                        <rect key="frame" x="20" y="52" width="368" height="17"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="System Server Text" id="1733">
+                            <font key="font" metaFont="systemBold"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="1734">
+                        <rect key="frame" x="17" y="12" width="160" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Stop System Server" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1735">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="removeService:" target="1668" id="1884"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="1728">
+                        <rect key="frame" x="249" y="12" width="167" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Start System Server" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1729">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="installAsService:" target="1668" id="1879"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+        </window>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="1771">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="207" y="859" width="382" height="164"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="213" height="107"/>
+            <view key="contentView" id="1772">
+                <rect key="frame" x="0.0" y="0.0" width="382" height="164"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" id="1773">
+                        <rect key="frame" x="218" y="81" width="88" height="22"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <string key="toolTip">Password required to connect with VNC Client.
+Note: Password length is not preserved</string>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="1774">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <action selector="validateInitialAuthentication:" target="1668" id="1911"/>
+                            <outlet property="delegate" destination="1668" id="1849"/>
+                        </connections>
+                    </textField>
+                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="1775">
+                        <rect key="frame" x="84" y="62" width="134" height="38"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="134" height="18"/>
+                        <size key="intercellSpacing" width="4" height="2"/>
+                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="1778">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="radio" title="VNC Password" imagePosition="left" alignment="left" state="on" toolTip="Password required to connect with VNC Client" tag="1" inset="2" id="1777">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" title="None" imagePosition="left" alignment="left" tag="2" inset="2" id="1776">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="validateInitialAuthentication:" target="1668" id="1912"/>
+                        </connections>
+                    </matrix>
+                    <textField verticalHuggingPriority="750" id="1779">
+                        <rect key="frame" x="17" y="111" width="357" height="40"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Before accepting connections from VNC clients you must select an authentication type:" id="1780">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="1781">
+                        <rect key="frame" x="286" y="12" width="82" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" inset="2" id="1782">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="setInitialAuthentication:" target="1668" id="1913"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+        </window>
+    </objects>
+</document>

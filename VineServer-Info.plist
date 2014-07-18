@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleGetInfoString</key>
+	<string>__PRODUCT_VERSION__ - Copyright __YEAR__ TestPlant, Inc. </string>
+	<key>CFBundleIconFile</key>
+	<string>VineServer.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.redstonesoftware.VineServer</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Vine Server</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersion</key>
+	<string>__PRODUCT_VERSION__</string>
+	<key>CFBundleShortVersionString</key>
+	<string>__PRODUCT_VERSION__</string>
+	<key>CFBundleSignature</key>
+	<string>vncS</string>
+	<key>CFBundleVersion</key>
+	<string>__BUILD_VERSION__</string>
+	<key>NSHelpFile</key>
+	<string>Vine Server.pdf</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright© __YEAR__ TestPlant, Inc.</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>ReverseHost</key>
+	<string></string>
+	<key>ReversePort</key>
+	<string></string>
+</dict>
+</plist>

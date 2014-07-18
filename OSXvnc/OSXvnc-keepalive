@@ -1,0 +1,82 @@
+#!/bin/sh 
+#
+# OSXvnc-keepalive 
+#
+# This little script, as you might imagine, will relaunch OSXvnc-server
+# when a user logs out and the OS kills the process (because it's running an event loop)
+# 
+# Modification Log:
+#
+# 2.2
+# Ignore external kills for the purpose of restart count
+#
+# 2.0  Adopted these contributions...
+#
+# 2006-06-07 Marvin Simkin
+# Try to capture a little more detail when it dies
+#
+# 1.71
+# For no documentable reason I can discern the server gets a 137 code when a user logs out
+#
+# 1.7
+# Only restart on items where the first bit is NOT set (less than 128)
+#
+# 1.5
+# Replace spurious ls -l entry with a much more appropriate pwd
+#
+# 1.4
+# Uses proper -lt and checks for less than 200 rather than more than 0 since process only return unsigned shorts
+#
+# 1.33
+# Modified so that keepalive only shuts down on unrecoverable errors
+#
+# 1.31
+# Modified so that OSXvnc can live in directories with spaces
+#
+# 1.11
+# Initial version
+
+echo "`date '+%Y-%m-%d %H:%M:%S'` $0: Starting"
+echo "`date '+%Y-%m-%d %H:%M:%S'`        pwd: '`pwd`'"
+echo "`date '+%Y-%m-%d %H:%M:%S'`         id: '`id`'"
+echo "`date '+%Y-%m-%d %H:%M:%S'`   uname -a: '`uname -a`'"
+echo "`date '+%Y-%m-%d %H:%M:%S'`     uptime: '`uptime`'"
+
+RESULT=15
+# OS X will send a SIGINT or SIGTERM to shutdown OSXvnc-server
+# On a high SIGNAL (over 128) we'll stop properly (this is what the server returns internally when an error occurs)
+## this seems to be stopping needlessly when it could recover
+##while [[ "$RESULT" -lt "128" ]]
+STOPNOW=0
+while [[ "$STOPNOW" -lt "1" ]]
+do
+	echo "`date '+%Y-%m-%d %H:%M:%S'` $0: Starting Server '$1'"
+	"$@" # Run our parameters
+	RESULT=$? # Record Result
+	echo "`date '+%Y-%m-%d %H:%M:%S'` Server exited with result: $RESULT"
+	echo "`date '+%Y-%m-%d %H:%M:%S'` Server exited with result: $RESULT" >> /var/log/osxvnc_exit.log
+	
+	# signal code 137 = 9 + 128 corresponds to SIGKILL (kill signal from term) 
+	# this signal is sent when a user logs out 
+	# don't treat recurrence of this code as an error; let the server restart! 
+	if [ "$RESULT" -ne "137" -o "$RESULT" -ne "134" ] 
+	then 
+        # check for same problem recurring frequently
+        COUNT=`cut -f1,7 -d' ' < /var/log/osxvnc_exit.log |
+          uniq -c |
+          tail -1 |
+          sed "s/^  *//" |
+          cut -f1 -d' '`
+
+        # set the repeated failures limit here
+        if test $COUNT -gt 4
+        then
+          echo "`date '+%Y-%m-%d %H:%M:%S'` The same error '$RESULT' happened $COUNT times in a row, not restarting!"
+          echo "`date '+%Y-%m-%d %H:%M:%S'` The same error '$RESULT' happened $COUNT times in a row, not restarting!" >> /var/log/osxvnc_exit.log
+          STOPNOW=1
+        fi
+	fi
+	sleep 5
+done
+
+echo "`date '+%Y-%m-%d %H:%M:%S'` $0: Shutdown with exit status " $RESULT

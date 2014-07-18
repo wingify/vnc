@@ -1,0 +1,32 @@
+{
+"Host Name" = "Nome dell'Host";
+"Host Names" = "Nomi degli Host";
+"IP Address" = "Indirizzo IP";
+"IP Addresses" = "Indirizzi IP";
+"Screen Resolution changed - Server Reinitialized" = "Risoluzione schermo cambiata - Server Reinizializzato";
+"Server Running" = "Il server è in esecuzione";
+"The server is not running." = "Il server non è in esecuzione.";
+"Start Server" = "Avvia Server";
+"Restart Server" = "Riavvia il Server";
+"The server is stopped." = "Il server è fermo.";
+"Probably because the OSXvnc server is already running as a Startup Item." = "Probabilmente perché il server Vine è già avviato all'avvio del Mac";
+"Probably because another VNC is already using this port." = "Probabilmente perché un altro VNC sta usando questa porta.";
+"The server has stopped running. See Log (%d)\n" = "Il server si è fermato. Consulta il resoconto (%d)\n";
+"The server has stopped running." = "Il server si è fermato.";
+"Need a valid Port or Display Number" = "Numero di porta / Numero Visore non corretto";
+"Problem - Unable to store password to %@" = "Problema - Impossibile registrare la parola chiave in %@";
+"Option Change Requires a Restart" = "Riavvia il server per rendere effettivi i cambiamenti";
+"Error: No Authorization" = "Errore: Nessuna Autorizzazione";
+"Error: Unable to setup StartupItems folder" = "Errore: Impossibile creare la cartella degli Elementi di Avvio";
+"Error: Unable to copy OSXvnc folder" = "Errore: Impossibile copiare la cartella di OSXvnc";
+"Error: Unable To Read in OSXvnc script File" = "Errore: Impossibile leggere lo script OSXvnc";
+"Error: Unable To Setup Password File" = "Errore: Impossibile impostare la parola chiave";
+"Error: Unable To Replace OSXvnc Script File" = "Errore: Impossibile rimpiazzare lo script OSXvnc";
+"Error: Unable To Write out Temporary Script File" = "Errore: Impossibile scrivere lo script temporaneo";
+"Startup Item Configured (Started)" = "Elemento di avvio configurato (Avviato)";
+"Startup Item Disabled (Stopped)" = "Elemento di avvio disattivato (Fermato)";
+"Error: Unabled to remove startup item" = "Errore: Impossibile rimuovere l'elemento di avvio";
+"Please specify a Connect Host to establish a connection" = "Per favore specifica un'host di connessione per stabilire un collegamento";
+"Connection invitation sent to Connect Host" = "Invito alla connessione inviato all'host";
+}
+

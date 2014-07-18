@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>OSXvnc-server.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Vine Server Package.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Vine Server.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>jpg.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>rdr.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>storepasswd.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>AB25D81508686B520065843D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB25D88E08686FC40065843D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB25D98F086876B80065843D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ABA30D3D15BEE7310001BAE5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ABA7B52C094A053000CD7499</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ABA7B635094A0A5000CD7499</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
